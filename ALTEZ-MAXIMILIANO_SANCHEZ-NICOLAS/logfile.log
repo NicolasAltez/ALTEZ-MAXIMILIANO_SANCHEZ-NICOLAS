@@ -1,0 +1,46 @@
+[2024-02-22 22:27:11] [ ERROR] [OndotologoDaoH2Impl:49] Error de Sintaxis en sentencia SQL " CREATE TABLE ODONTOLOGOS(ID INT AUTO_INCREMENT PRIMARY KEY, NUMERO_DE_MATRICULA VARCHAR(255) NOT NULL, NOMBRE VARCHAR(255) NOT NULL, APELLIDO VARCHAR(255) NOT NULL[*]"; se esperaba "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement " CREATE TABLE ODONTOLOGOS(ID INT AUTO_INCREMENT PRIMARY KEY, NUMERO_DE_MATRICULA VARCHAR(255) NOT NULL, NOMBRE VARCHAR(255) NOT NULL, APELLIDO VARCHAR(255) NOT NULL[*]"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+ CREATE TABLE ODONTOLOGOS(ID INT AUTO_INCREMENT PRIMARY KEY, NUMERO_DE_MATRICULA VARCHAR(255) NOT NULL, NOMBRE VARCHAR(255) NOT NULL, APELLIDO VARCHAR(255) NOT NULL [42001-224]
+[2024-02-22 22:27:27] [ ERROR] [OndotologoDaoH2Impl:49] Error de Sintaxis en sentencia SQL " CREATE TABLE ODONTOLOGOS(ID INT AUTO_INCREMENT PRIMARY KEY, NUMERO_DE_MATRICULA VARCHAR(255) NOT NULL, NOMBRE VARCHAR(255) NOT NULL, APELLIDO VARCHAR(255) NOT NULL[*]"; se esperaba "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement " CREATE TABLE ODONTOLOGOS(ID INT AUTO_INCREMENT PRIMARY KEY, NUMERO_DE_MATRICULA VARCHAR(255) NOT NULL, NOMBRE VARCHAR(255) NOT NULL, APELLIDO VARCHAR(255) NOT NULL[*]"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+ CREATE TABLE ODONTOLOGOS(ID INT AUTO_INCREMENT PRIMARY KEY, NUMERO_DE_MATRICULA VARCHAR(255) NOT NULL, NOMBRE VARCHAR(255) NOT NULL, APELLIDO VARCHAR(255) NOT NULL [42001-224]
+[2024-02-22 22:27:27] [ ERROR] [OndotologoDaoH2Impl:49] Error de Sintaxis en sentencia SQL " CREATE TABLE ODONTOLOGOS(ID INT AUTO_INCREMENT PRIMARY KEY, NUMERO_DE_MATRICULA VARCHAR(255) NOT NULL, NOMBRE VARCHAR(255) NOT NULL, APELLIDO VARCHAR(255) NOT NULL[*]"; se esperaba "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement " CREATE TABLE ODONTOLOGOS(ID INT AUTO_INCREMENT PRIMARY KEY, NUMERO_DE_MATRICULA VARCHAR(255) NOT NULL, NOMBRE VARCHAR(255) NOT NULL, APELLIDO VARCHAR(255) NOT NULL[*]"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+ CREATE TABLE ODONTOLOGOS(ID INT AUTO_INCREMENT PRIMARY KEY, NUMERO_DE_MATRICULA VARCHAR(255) NOT NULL, NOMBRE VARCHAR(255) NOT NULL, APELLIDO VARCHAR(255) NOT NULL [42001-224]
+[2024-02-22 22:28:49] [ ERROR] [OndotologoDaoH2Impl:49] Valor Invalido "2" para el parametro "columnIndex"
+Invalid value "2" for parameter "columnIndex" [90008-224]
+[2024-02-22 22:28:49] [ INFO ] [OndotologoDaoH2Impl:53] Se hizo rollback de la transaccion ya que hubo un error al registrar el odontologo
+[2024-02-22 22:28:49] [ ERROR] [OndotologoDaoH2Impl:49] Valor Invalido "2" para el parametro "columnIndex"
+Invalid value "2" for parameter "columnIndex" [90008-224]
+[2024-02-22 22:28:49] [ INFO ] [OndotologoDaoH2Impl:53] Se hizo rollback de la transaccion ya que hubo un error al registrar el odontologo
+[2024-02-22 22:29:46] [ ERROR] [OndotologoDaoH2Impl:49] Valor Invalido "2" para el parametro "columnIndex"
+Invalid value "2" for parameter "columnIndex" [90008-224]
+[2024-02-22 22:29:46] [ INFO ] [OndotologoDaoH2Impl:53] Se hizo rollback de la transaccion ya que hubo un error al registrar el odontologo
+[2024-02-22 22:31:29] [ ERROR] [OndotologoDaoH2Impl:49] Valor Invalido "2" para el parametro "columnIndex"
+Invalid value "2" for parameter "columnIndex" [90008-224]
+[2024-02-22 22:31:29] [ INFO ] [OndotologoDaoH2Impl:53] Se hizo rollback de la transaccion ya que hubo un error al registrar el odontologo
+[2024-02-22 22:32:43] [ ERROR] [OndotologoDaoH2Impl:51] Valor Invalido "2" para el parametro "columnIndex"
+Invalid value "2" for parameter "columnIndex" [90008-224]
+[2024-02-22 22:32:43] [ INFO ] [OndotologoDaoH2Impl:55] Se hizo rollback de la transaccion ya que hubo un error al registrar el odontologo
+[2024-02-22 22:33:31] [ ERROR] [OndotologoDaoH2Impl:51] Valor Invalido "2" para el parametro "columnIndex"
+Invalid value "2" for parameter "columnIndex" [90008-224]
+[2024-02-22 22:33:32] [ INFO ] [OndotologoDaoH2Impl:55] Se hizo rollback de la transaccion ya que hubo un error al registrar el odontologo
+[2024-02-22 22:34:44] [ ERROR] [OndotologoDaoH2Impl:51] Columna "numero_de_matricula" no encontrada
+Column "numero_de_matricula" not found [42122-224]
+[2024-02-22 22:34:44] [ INFO ] [OndotologoDaoH2Impl:55] Se hizo rollback de la transaccion ya que hubo un error al registrar el odontologo
+[2024-02-22 22:35:45] [ ERROR] [OndotologoDaoH2Impl:51] Columna "numero_de_matricula" no encontrada
+Column "numero_de_matricula" not found [42122-224]
+[2024-02-22 22:37:00] [ INFO ] [OndotologoDaoH2Impl:55] Se hizo rollback de la transaccion ya que hubo un error al registrar el odontologo
+[2024-02-22 22:39:50] [ INFO ] [OndotologoDaoH2Impl:47] Odontologo registrado con exito: Odontologo: id=3, numeroDeMatricula='AE2132132', nombre='Nicolas', apellido='Sanchez'}
+[2024-02-22 22:41:38] [ INFO ] [OndotologoDaoH2Impl:89] Se encontraron los siguientes odontologos: [Odontologo: id=1, numeroDeMatricula='123AE', nombre='Maximiliano', apellido='Altez'}, Odontologo: id=2, numeroDeMatricula='456BE', nombre='Nicolas', apellido='Sanchez'}]
+[2024-02-22 22:41:38] [ INFO ] [OndotologoDaoH2Impl:47] Odontologo registrado con exito: Odontologo: id=3, numeroDeMatricula='AE2132132', nombre='Nicolas', apellido='Sanchez'}
+[2024-02-22 22:42:24] [ INFO ] [OdontologoDaoMemoriaImpl:23] Odontologo guardado con exitoOdontologo: id=1, numeroDeMatricula='AE2132132', nombre='Maximiliano', apellido='Altez'}
+[2024-02-22 22:42:52] [ INFO ] [OdontologoDaoMemoriaImpl:29] Odontologos encontrados: []
+[2024-02-22 22:44:08] [ INFO ] [OdontologoDaoMemoriaImpl:29] Odontologos encontrados: [Odontologo: id=0, numeroDeMatricula='AE2132132', nombre='Maximiliano', apellido='Altez'}]
+[2024-02-22 22:45:24] [ INFO ] [OndotologoDaoH2Impl:89] Se encontraron los siguientes odontologos: [Odontologo: id=1, numeroDeMatricula='123AE', nombre='Maximiliano', apellido='Altez'}, Odontologo: id=2, numeroDeMatricula='456BE', nombre='Nicolas', apellido='Sanchez'}]
+[2024-02-22 22:45:24] [ INFO ] [OdontologoDaoMemoriaImpl:23] Odontologo guardado con exitoOdontologo: id=1, numeroDeMatricula='AE2132132', nombre='Maximiliano', apellido='Altez'}
+[2024-02-22 22:45:24] [ INFO ] [OndotologoDaoH2Impl:47] Odontologo registrado con exito: Odontologo: id=3, numeroDeMatricula='AE2132132', nombre='Nicolas', apellido='Sanchez'}
+[2024-02-22 22:45:24] [ INFO ] [OdontologoDaoMemoriaImpl:29] Odontologos encontrados: [Odontologo: id=0, numeroDeMatricula='AE2132132', nombre='Maximiliano', apellido='Altez'}, Odontologo: id=0, numeroDeMatricula='AE2132132', nombre='Nicolas', apellido='Sanchez'}]
+[2024-02-22 22:45:47] [ INFO ] [OdontologoDaoMemoriaImpl:29] Odontologos encontrados: [Odontologo: id=0, numeroDeMatricula='AE2132132', nombre='Maximiliano', apellido='Altez'}, Odontologo: id=0, numeroDeMatricula='AE2132132', nombre='Nicolas', apellido='Sanchez'}]
+[2024-02-22 22:46:00] [ INFO ] [OdontologoDaoMemoriaImpl:29] Odontologos encontrados: [Odontologo: id=0, numeroDeMatricula='AE2132132', nombre='Maximiliano', apellido='Altez'}, Odontologo: id=0, numeroDeMatricula='AE2132132', nombre='Nicolas', apellido='Sanchez'}]
+[2024-02-22 22:46:26] [ INFO ] [OdontologoDaoMemoriaImpl:29] Odontologos encontrados: [Odontologo: id=0, numeroDeMatricula='AE2132132', nombre='Maximiliano', apellido='Altez'}, Odontologo: id=0, numeroDeMatricula='AE2132132', nombre='Nicolas', apellido='Sanchez'}]
