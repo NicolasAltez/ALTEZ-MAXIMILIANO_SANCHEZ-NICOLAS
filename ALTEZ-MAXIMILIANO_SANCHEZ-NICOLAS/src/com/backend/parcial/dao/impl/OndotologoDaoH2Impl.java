@@ -28,10 +28,11 @@ public class OndotologoDaoH2Impl implements IDao<Odontologo> {
 
             connection.commit();
 
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO ODONTOLOGOS (nombre, apellido, matricula) VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
-            preparedStatement.setString(1, odontologo.getNombre());
-            preparedStatement.setString(2, odontologo.getApellido());
-            preparedStatement.setString(3, odontologo.getNumeroDeMatricula());
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO ODONTOLOGOS (numero_de_matricula, nombre, apellido) VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            preparedStatement.setString(1, odontologo.getNumeroDeMatricula());
+            preparedStatement.setString(2, odontologo.getNombre());
+            preparedStatement.setString(3, odontologo.getApellido());
+
             preparedStatement.execute();
 
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
