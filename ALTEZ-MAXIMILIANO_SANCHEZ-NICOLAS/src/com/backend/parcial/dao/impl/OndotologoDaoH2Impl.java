@@ -5,10 +5,7 @@ import com.backend.parcial.dbconnection.H2Connection;
 import com.backend.parcial.entity.Odontologo;
 import org.apache.log4j.Logger;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,10 +20,9 @@ public class OndotologoDaoH2Impl implements IDao<Odontologo> {
         Odontologo odontologoRegistrado = null;
 
         try {
+
             connection = H2Connection.getConnection();
             connection.setAutoCommit(false);
-
-
 
             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO ODONTOLOGOS (numero_de_matricula, nombre, apellido) VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, odontologo.getNumeroDeMatricula());
@@ -35,13 +31,15 @@ public class OndotologoDaoH2Impl implements IDao<Odontologo> {
 
             preparedStatement.execute();
 
-            connection.commit();
+
 
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
 
             while (resultSet.next()) {
                 odontologoRegistrado = new Odontologo(resultSet.getInt(1), odontologo.getNumeroDeMatricula(), odontologo.getNombre(), odontologo.getApellido());
             }
+
+            connection.commit();
 
             if (odontologoRegistrado != null) {
                 LOG.info("Odontologo registrado con exito: " + odontologoRegistrado);
@@ -53,7 +51,7 @@ public class OndotologoDaoH2Impl implements IDao<Odontologo> {
                 try {
                     connection.rollback();
                     LOG.info("Se hizo rollback de la transaccion ya que hubo un error al registrar el odontologo");
-                } catch (Exception ex) {
+                } catch (SQLException ex) {
                     LOG.error(ex.getMessage());
                 }
             }
@@ -82,7 +80,7 @@ public class OndotologoDaoH2Impl implements IDao<Odontologo> {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
-                odontologos.add(new Odontologo(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4)));
+                odontologos.add(crearOdontologo(resultSet));
             }
 
             if (!odontologos.isEmpty()) {
@@ -102,9 +100,12 @@ public class OndotologoDaoH2Impl implements IDao<Odontologo> {
         }
         return odontologos;
     }
-
     private boolean existeLaConexion(Connection connection) {
         return connection != null;
+    }
+
+    private Odontologo crearOdontologo(ResultSet resultSet) throws SQLException {
+        return new Odontologo(resultSet.getInt("id"), resultSet.getString("numero_de_matricula"), resultSet.getString("nombre"), resultSet.getString("apellido"));
     }
 
 }
