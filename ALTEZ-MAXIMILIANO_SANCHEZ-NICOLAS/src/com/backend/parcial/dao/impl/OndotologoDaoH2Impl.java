@@ -14,7 +14,7 @@ import java.util.List;
 
 public class OndotologoDaoH2Impl implements IDao<Odontologo> {
 
-    private final Logger LOG = Logger.getLogger(getClass());
+    private final Logger LOG = Logger.getLogger(OndotologoDaoH2Impl.class);
 
     @Override
     public Odontologo guardar(Odontologo odontologo) {

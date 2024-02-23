@@ -26,7 +26,7 @@ public class OdontologoDaoMemoriaImpl implements IDao<Odontologo> {
 
     @Override
     public List<Odontologo> buscarTodos() {
-
+        LOG.info("Odontologos encontrados: " + listaOdontologos);
         return listaOdontologos;
     }
 }
