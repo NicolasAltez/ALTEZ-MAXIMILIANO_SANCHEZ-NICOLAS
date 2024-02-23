@@ -10,28 +10,28 @@ public class OdontologoDaoMemoriaImpl implements IDao<Odontologo> {
 
     private final Logger LOG = Logger.getLogger(OdontologoDaoMemoriaImpl.class);
 
-    private List<Odontologo> listaOdontologos;
+    private List<Odontologo> odontologoRepository;
 
-    public OdontologoDaoMemoriaImpl(List<Odontologo> listaOdontologos){
-        this.listaOdontologos = listaOdontologos;
+    public OdontologoDaoMemoriaImpl(List<Odontologo> odontologoRepository){
+        this.odontologoRepository = odontologoRepository;
     }
 
     @Override
     public Odontologo guardar(Odontologo odontologo) {
         Odontologo odontologoGuardado = crearOdontologo(odontologo);
-        listaOdontologos.add(odontologo);
+        odontologoRepository.add(odontologo);
         LOG.info("Odontologo guardado con exito" + odontologoGuardado);
         return odontologoGuardado;
     }
 
     @Override
     public List<Odontologo> buscarTodos() {
-        LOG.info("Odontologos encontrados: " + listaOdontologos);
-        return listaOdontologos;
+        LOG.info("Odontologos encontrados: " + odontologoRepository);
+        return odontologoRepository;
     }
 
     private Odontologo crearOdontologo(Odontologo odontologo){
-        int id = listaOdontologos.size() + 1;
+        int id = odontologoRepository.size() + 1;
         return new Odontologo(id, odontologo.getNumeroDeMatricula(), odontologo.getNombre(), odontologo.getApellido());
     }
 }
