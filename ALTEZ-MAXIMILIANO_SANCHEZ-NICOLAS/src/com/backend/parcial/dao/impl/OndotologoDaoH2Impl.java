@@ -26,7 +26,7 @@ public class OndotologoDaoH2Impl implements IDao<Odontologo> {
             connection = H2Connection.getConnection();
             connection.setAutoCommit(false);
 
-            connection.commit();
+
 
             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO ODONTOLOGOS (numero_de_matricula, nombre, apellido) VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, odontologo.getNumeroDeMatricula());
@@ -35,10 +35,12 @@ public class OndotologoDaoH2Impl implements IDao<Odontologo> {
 
             preparedStatement.execute();
 
+            connection.commit();
+
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
 
             while (resultSet.next()) {
-                odontologoRegistrado = crearOdontologo(resultSet);
+                odontologoRegistrado = new Odontologo(resultSet.getInt(1), odontologo.getNumeroDeMatricula(), odontologo.getNombre(), odontologo.getApellido());
             }
 
             if (odontologoRegistrado != null) {
@@ -80,7 +82,7 @@ public class OndotologoDaoH2Impl implements IDao<Odontologo> {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
-                odontologos.add(crearOdontologo(resultSet));
+                odontologos.add(new Odontologo(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4)));
             }
 
             if (!odontologos.isEmpty()) {
@@ -99,10 +101,6 @@ public class OndotologoDaoH2Impl implements IDao<Odontologo> {
             }
         }
         return odontologos;
-    }
-
-    private Odontologo crearOdontologo(ResultSet resultSet) throws Exception {
-        return new Odontologo(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4));
     }
 
     private boolean existeLaConexion(Connection connection) {
